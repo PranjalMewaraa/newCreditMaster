@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "avatar": "/images/avatar/review-1.png",
+    "name": "Marcus J., Owner of MJ Courier Services",
+    "position": "Courier Business Owner",
+    "quote": "Before Credit Master AI, I didn’t even know business credit existed. Now, I’ve got $75,000 in revolving credit and my company finally looks legit on paper.",
+    "date": "Feb 03, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  },
+  {
+    "id": 2,
+    "avatar": "/images/avatar/review-2.png",
+    "name": "Anita P.",
+    "position": "Founder of Lush Web Creations",
+    "quote": "I tried building business credit myself for over a year with no results. These guys got me approved for my first Net 30 accounts in 2 weeks!",
+    "date": "Feb 10, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  },
+  {
+    "id": 3,
+    "avatar": "/images/avatar/review-3.png",
+    "name": "Jamal R.",
+    "position": "CEO of Jamal’s Custom Tees",
+    "quote": "The roadmap was so easy to follow. I went from 0 to an 85 Paydex score and $50k in vendor credit with their help.",
+    "date": "Feb 17, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  },
+  {
+    "id": 4,
+    "avatar": "/images/avatar/review-4.png",
+    "name": "Tasha B.",
+    "position": "Real Estate Investor",
+    "quote": "What I loved most was the personal support. They actually cared about helping me get funded—not just selling software.",
+    "date": "Feb 24, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  },
+  {
+    "id": 5,
+    "avatar": "/images/avatar/review-5.png",
+    "name": "David L.",
+    "position": "Owner of Limitless Marketing Group",
+    "quote": "Credit Master AI taught me the game banks don’t want you to know. I didn’t need to use my personal credit to get approved.",
+    "date": "Mar 03, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  },
+  {
+    "id": 6,
+    "avatar": "/images/avatar/review-11.png",
+    "name": "Erica M.",
+    "position": "Co-founder of Ecom Boosters",
+    "quote": "They helped me fix my setup and get listed with Experian and D&B. Now lenders actually take me seriously.",
+    "date": "Mar 10, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  },
+  {
+    "id": 7,
+    "avatar": "/images/avatar/review-1.png",
+    "name": "Henry S.",
+    "position": "Trucking Business Owner",
+    "quote": "I was denied 3 times before. Now I’ve got a business credit card with a $15k limit and a fleet card for my trucks.",
+    "date": "Mar 17, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  },
+  {
+    "id": 8,
+    "avatar": "/images/avatar/review-4.png",
+    "name": "Priya K.",
+    "position": "E-commerce Entrepreneur",
+    "quote": "Their dashboard makes it easy to track everything—credit scores, vendors, tiers. I finally feel in control of my finances.",
+    "date": "Mar 24, 2024",
+    "lightLogo": "/images/icons/testimonial-logo.png",
+    "darkLogo": "/images/icons/testimonial-dark-logo.png"
+  }
+]

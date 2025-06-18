@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Resources",
+    "links": [
+      { "href": "/about", "label": "About" },
+      { "href": "/services", "label": "Our Solution" },
+      { "href": "/pricing", "label": "Pricing" },
+      { "href": "/about", "label": "About" },
+      { "href": "/policy", "label": "Privacy Policy" }
+    ]
+  },
+  {
+    "title": "Company",
+    "links": [
+      { "href": "/disclaimer", "label": "Disclaimer" },
+      { "href": "/access", "label": "Accessibility Policy" },
+      { "href": "/faq", "label": "FAQ" },
+      { "href": "/contact", "label": "Contact" },
+      { "href": "/terms", "label": "Terms of Service" },
+      { "href": "/policy", "label": "Privacy Policy" }
+    ]
+  }
+]
