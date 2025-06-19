@@ -30,10 +30,11 @@ const Home = () => {
     <LayoutTwo>
       <HeroV25 />
       <AboutV6 />
-      <MarqueeV5 />
+      <WhyChooseUsV8 />
+      {/* <MarqueeV5 /> */}
       {/* <WhatWeOffer /> */}
       <ServicesV16 />
-      <WhyChooseUsV8 />
+
       {/* <ProjectCaseStudies /> */}
       <ProcessV11 />
       <TestimonialV12 />

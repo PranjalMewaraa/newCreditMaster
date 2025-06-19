@@ -10,8 +10,8 @@ const ServicesV16 = () => {
           <div className="flex-1 md:self-start">
             <TextAppearAnimation>
               <h2 className="text-appear lg:leading-[1.21]">
-                Seamless planning
-                <span className="font-instrument italic"> exceptional experiences </span>
+                Ready to elevate
+                <span className="font-instrument italic">Your Business</span>
               </h2>
             </TextAppearAnimation>
           </div>
