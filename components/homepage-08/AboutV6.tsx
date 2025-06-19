@@ -3,7 +3,10 @@
 import CounterAnimation from '@/utils/CounterAnimation'
 import Link from 'next/link'
 import RevealWrapper from '../animation/RevealWrapper'
+import { CiSearch } from 'react-icons/ci'
 import TextAppearAnimation from '../animation/TextAppearAnimation'
+import { FaChessBishop } from 'react-icons/fa6'
+import { FaMoneyBillWave } from 'react-icons/fa6'
 const stats = [
   { number: 15, suffix: '', label: 'Years of Experience' },
   { number: 50, suffix: '+', label: 'Countries in Services' },
@@ -56,21 +59,21 @@ const AboutV6 = () => {
           ))} */}
           <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
             <h2 className="lg:text-7xl">
-              <img src="/seacgh.png" className="scale-95" alt="" />
+              <CiSearch className="h-20 dark:text-white" />
             </h2>
             <p className="text-2xl font-bold">Profile Analysis</p>
             <p className="text-center">Evaluate your current business credit status</p>
           </RevealWrapper>
           <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
             <h2 className="lg:text-7xl">
-              <img src="/chs.png" alt="" className="scale-110" />
+              <FaChessBishop className="h-20 dark:text-white" />
             </h2>
             <p className="text-center text-2xl font-bold">Strategic Planning</p>
             <p className="text-center">Develop a tailored credit building roadmap</p>
           </RevealWrapper>
           <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
             <h2 className="lg:text-7xl">
-              <img src="/money2.png" alt="" />
+              <FaMoneyBillWave className="h-20 dark:text-white" />
             </h2>
             <p className="text-center text-2xl font-bold">Funding Aquisition</p>
             <p className="text-center">Connect with lendors according to business profile</p>
