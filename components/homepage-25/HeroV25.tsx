@@ -33,34 +33,28 @@ const HeroV25 = () => {
                   </svg>
                 </div>
               </div>
-              <img
-                src="/images/hero-img/video-thumbnail.png"
-                alt="Video thumbnail showing company overview"
-                width={800}
-                height={450}
-              />
+              <img src="/homeww.png" alt="Video thumbnail showing company overview" width={800} height={450} />
             </div>
           </RevealWrapper>
           <div className="lg:w-1/2">
             <RevealWrapper
               as="h1"
-              className="reveal-me text-[42px] font-normal leading-[1.3] md:text-[47px] md:leading-[1.2] lg:text-[54px] lg:leading-[1.24] xl:text-[64px]">
-              Your reputation, our <br className="hidden lg:block" />
-              expertise.
-              <i className="font-instrument"> Let's make</i>
+              className="reveal-me text-[64px] font-normal leading-[1.3] md:text-[47px] md:leading-[1.2] lg:text-[64px] lg:leading-[1.24] xl:text-[72px]">
+              Unlock $50K+ in Business Funding <br className="hidden lg:block" />
+              Without personal risk
+              {/* <i className="font-instrument"> Let's make</i>
               <br className="hidden lg:block" />
-              <i className="font-instrument">headlines</i>
+              <i className="font-instrument">headlines</i> */}
             </RevealWrapper>
 
             <RevealWrapper as="p" className="reveal-me max-w-xl">
-              At Credit Master AI, we craft strategic PR campaigns that elevate brands, manage crises, and build lasting
-              trust.
+              At Credit Master AI, We help you build fundable business profile with our AI powered solutions
             </RevealWrapper>
 
             <RevealWrapperV2 className="reveal-me mt-7 md:mt-9 lg:mt-14">
               <Link href="/contact" className="rv-button rv-button-primary rv-button-sm block md:inline-block">
                 <div className="rv-button-top text-center">
-                  <span>Talk to an Expert</span>
+                  <span>Start My Assessment</span>
                 </div>
                 <div className="rv-button-bottom text-center">
                   <span className="text-nowrap">Talk to an Expert</span>

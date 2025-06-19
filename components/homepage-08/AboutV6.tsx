@@ -16,9 +16,9 @@ const AboutV6 = () => {
       <div className="container">
         <div>
           <TextAppearAnimation>
-            <h2 className="text-appear">Trusted by Industry Leaders</h2>
+            <h2 className="text-appear">How It Works</h2>
           </TextAppearAnimation>
-          <div className="mb-20 mt-8 flex flex-col items-center justify-between gap-y-5 md:mb-28 md:mt-16 md:flex-row md:gap-x-20">
+          {/* <div className="mb-20 mt-8 flex flex-col items-center justify-between gap-y-5 md:mb-28 md:mt-16 md:flex-row md:gap-x-20">
             <RevealWrapper as="figure" className="w-full md:h-[305px] md:w-96">
               <img src="/images/home-3/about-banner.png" alt="about-banner" className="w-full" />
             </RevealWrapper>
@@ -40,11 +40,11 @@ const AboutV6 = () => {
                 </li>
               </RevealWrapper>
             </figcaption>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex items-center justify-center gap-[30px] pt-[75px] max-xl:flex-wrap">
-          {stats.map((stat) => (
+          {/* {stats.map((stat) => (
             <RevealWrapper
               key={stat.number}
               className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
@@ -53,7 +53,28 @@ const AboutV6 = () => {
               </h2>
               <p>{stat.label}</p>
             </RevealWrapper>
-          ))}
+          ))} */}
+          <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
+            <h2 className="lg:text-7xl">
+              <img src="/seacgh.png" className="scale-95" alt="" />
+            </h2>
+            <p className="text-2xl font-bold">Profile Analysis</p>
+            <p className="text-center">Evaluate your current business credit status</p>
+          </RevealWrapper>
+          <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
+            <h2 className="lg:text-7xl">
+              <img src="/chs.png" alt="" className="scale-110" />
+            </h2>
+            <p className="text-center text-2xl font-bold">Strategic Planning</p>
+            <p className="text-center">Develop a tailored credit building roadmap</p>
+          </RevealWrapper>
+          <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
+            <h2 className="lg:text-7xl">
+              <img src="/money2.png" alt="" />
+            </h2>
+            <p className="text-center text-2xl font-bold">Funding Aquisition</p>
+            <p className="text-center">Connect with lendors according to business profile</p>
+          </RevealWrapper>
         </div>
       </div>
     </section>

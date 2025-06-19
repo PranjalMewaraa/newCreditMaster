@@ -1,6 +1,7 @@
 import Hero from '@/components/homepage-01/Hero'
 import Portfolio from '@/components/homepage-01/Portfolio'
 import Testimonial from '@/components/homepage-01/Testimonial'
+import AboutV6 from '@/components/homepage-08/AboutV6'
 import HeroV24 from '@/components/homepage-24/HeroV24'
 import MarqueeV5 from '@/components/homepage-24/MarqueeV5'
 import ProcessV11 from '@/components/homepage-24/ProcessV11'
@@ -8,6 +9,7 @@ import ServicesV16 from '@/components/homepage-24/ServicesV16'
 import TestimonialV12 from '@/components/homepage-24/TestimonialV12'
 import WhatWeOffer from '@/components/homepage-24/WhatWeOffer'
 import WhyChooseUsV8 from '@/components/homepage-24/WhyChooseUsV8'
+import HeroV25 from '@/components/homepage-25/HeroV25'
 import About from '@/components/shared/About'
 import ClientsV3 from '@/components/shared/ClientsV3'
 import Community from '@/components/shared/Community'
@@ -26,9 +28,10 @@ export const metadata = {
 const Home = () => {
   return (
     <LayoutTwo>
-      <HeroV24 />
+      <HeroV25 />
+      <AboutV6 />
       <MarqueeV5 />
-      <WhatWeOffer />
+      {/* <WhatWeOffer /> */}
       <ServicesV16 />
       <WhyChooseUsV8 />
       {/* <ProjectCaseStudies /> */}
