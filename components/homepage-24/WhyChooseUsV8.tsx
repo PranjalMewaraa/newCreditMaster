@@ -51,7 +51,7 @@ const WhyChooseUsV8 = () => {
               <img src="/ss.png" className="w-2/3" alt="" />
             </div>
           </div>
-          <div className="col-span-6 grid grid-cols-1">
+          <div className="col-span-12 grid grid-cols-1 md:col-span-6">
             <div className="col-span-12 flex-1 border px-[30px] py-10 dark:border-dark lg:col-span-6">
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width={61} height={60} viewBox="0 0 61 60" fill="none">

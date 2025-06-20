@@ -58,21 +58,21 @@ const AboutV6 = () => {
             </RevealWrapper>
           ))} */}
           <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
-            <h2 className="lg:text-7xl">
+            <h2 className="max-w-96 lg:text-7xl">
               <CiSearch className="h-20 dark:text-white" />
             </h2>
             <p className="text-2xl font-bold">Profile Analysis</p>
             <p className="text-center">Evaluate your current business credit status</p>
           </RevealWrapper>
           <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
-            <h2 className="lg:text-7xl">
+            <h2 className="max-w-96 lg:text-7xl">
               <FaChessBishop className="h-20 dark:text-white" />
             </h2>
             <p className="text-center text-2xl font-bold">Strategic Planning</p>
             <p className="text-center">Develop a tailored credit building roadmap</p>
           </RevealWrapper>
           <RevealWrapper className="flex min-h-[210px] min-w-[320px] flex-col items-center justify-center space-y-3 border px-9 py-7 dark:border-dark lg:px-16 lg:py-10">
-            <h2 className="lg:text-7xl">
+            <h2 className="max-w-96 lg:text-7xl">
               <FaMoneyBillWave className="h-20 dark:text-white" />
             </h2>
             <p className="text-center text-2xl font-bold">Funding Aquisition</p>
