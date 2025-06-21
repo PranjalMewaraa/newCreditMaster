@@ -1,7 +1,7 @@
 'use client'
 
 import logoDark from '@/public/images/logo-white.png'
-import logo from '@/public/images/logo.png'
+import logo from '@/public/logo.png'
 import { gsap } from 'gsap'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -290,7 +290,7 @@ export default function Navbar() {
           <div className="flex justify-between">
             <Link href="/" className="relative z-10">
               <Image
-                className="inline-block max-h-[68px] w-auto dark:hidden"
+                className="inline-block max-h-[98px] w-auto dark:hidden"
                 src={logo}
                 alt="logo"
                 width={136}
@@ -298,11 +298,11 @@ export default function Navbar() {
                 priority
               />
               <Image
-                className="hidden max-h-[68px] w-auto dark:inline-block"
-                src={logoDark}
+                className="hidden max-h-[98px] w-auto dark:inline-block"
+                src={logo}
                 alt="logo"
-                width={136}
-                height={68}
+                width={250}
+                height={98}
                 priority
               />
             </Link>
