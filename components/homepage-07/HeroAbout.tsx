@@ -11,10 +11,27 @@ const HeroAbout = ({ spacingTop }: PropsTypes) => {
 
   return spacingTop ? (
     <RevealWrapper className={`${spacingTop} container`}>
+      <h3 ref={revealRef} className="reveal-text-1 text-secondary dark:text-backgroundBody">
+        Our Mission
+      </h3>
+      <h3 ref={revealRef} className="reveal-text-2 text-xl text-secondary dark:text-backgroundBody">
+        At CreditMaster AI, our mission is to empower entrepreneurs and business owners with the tools and resources
+        they need to build credit, access funding, and scale their companies with confidence and clarity.
+      </h3>
+      <br />
+      <br />
+      <h3 ref={revealRef} className="reveal-text-1 text-secondary dark:text-backgroundBody">
+        What we do
+      </h3>
       <h3 ref={revealRef} className="reveal-text-2 text-secondary dark:text-backgroundBody">
-        Credit Master AI is a powerful business credit and funding platform that helps entrepreneurs and small business
-        owners build strong credit profiles and access funding—without using personal guarantees. With AI-driven tools
-        and real lender data, it guides you step-by-step to establish credibility and unlock financial growth.
+        <ul className="text-lg">
+          <li>Provide AI-powered software to build business credit and obtain funding</li>
+          <br />
+          <li> Offer advisory services to navigate the credit and funding landscape</li>
+          <br />
+          <li>Support with compliance, business formation, and credit monitoring</li>
+          <br />
+        </ul>
       </h3>
     </RevealWrapper>
   ) : (

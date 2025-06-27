@@ -17,7 +17,8 @@ const AboutPage = () => {
   return (
     <LayoutOne>
       <AboutHero />
-      <Video />
+
+      {/* <Video /> */}
       <HeroAbout spacingTop="pt-10 sm:pt-16 md:pt-[100px] mb-10 lg:mb-20" />
       {/* <SkewMarquee /> */}
       <ServicesV3 />

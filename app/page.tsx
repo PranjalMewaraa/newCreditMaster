@@ -31,8 +31,7 @@ const Home = () => {
       <HeroV25 />
       <AboutV6 />
       <WhyChooseUsV8 />
-      {/* <MarqueeV5 /> */}
-      {/* <WhatWeOffer /> */}
+
       <ServicesV16 />
 
       {/* <ProjectCaseStudies /> */}

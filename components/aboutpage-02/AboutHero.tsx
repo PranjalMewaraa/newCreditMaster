@@ -11,8 +11,8 @@ const AboutHero = () => {
           </h1>
 
           <p className="max-w-[470px]">
-            Integrate Credit Master AI into your business to unlock fast, smart, and secure access to business credit
-            and funding solutions.
+            Discover who we are, our mission, and how we are transform business credit access for entrepreneur across
+            the globe <area shape="" coords="" href="" alt="" />
           </p>
         </div>
 

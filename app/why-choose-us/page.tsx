@@ -24,7 +24,7 @@ const AboutPage = () => {
       {/* <Video /> */}
       <About />
       {/* <Team /> */}
-      <Marquee withBorder={true} />
+      {/* <Marquee withBorder={true} /> */}
       {/* <AwardsV2 /> */}
       <CTA>
         Let's chat! with us.

@@ -1,213 +1,146 @@
 'use client'
 import React, { useState } from 'react'
+import useReveal from '@/hooks/useReveal'
 import RevealWrapper from '../animation/RevealWrapper'
 
-const ContactForm = () => {
+interface ContactProps {
+  marquee?: boolean
+}
+
+const ContactPage = ({ marquee = true }: ContactProps) => {
+  const { revealRef } = useReveal()
   const [formData, setFormData] = useState({
-    name: '',
-    company: '',
+    firstName: '',
+    lastName: '',
+    phone: '',
     email: '',
-    service: 'UI/UX',
-    budget: '40k',
-    message: '',
+    requirement: '',
+    comment: '',
+    termsAccepted: false,
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? e.target.value : value,
+    }))
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log('Form Data Submitted:', formData)
-    alert(`${formData.name} Your Data Has Been Submited`)
-    // Add your form submission logic here (e.g., API call)
+    if (!formData.termsAccepted) {
+      alert('Please accept the Terms and Conditions.')
+      return
+    }
+    console.log('Submitted Data:', formData)
+    alert(`Thank you, ${formData.firstName}. Your message has been submitted.`)
   }
 
   return (
-    <section className="pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
+    <section className="pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[120px]">
       <div className="container">
-        <RevealWrapper
-          as="form"
-          onSubmit={handleSubmit}
-          className="reveal-me mx-auto grid max-w-[800px] grid-cols-1 gap-[30px] md:grid-cols-2">
-          <div className="md:col-span-full">
-            <label
-              htmlFor="name"
-              className="text-2xl leading-[1.2] tracking-[-0.48px] text-[#000000b3] dark:text-dark-100">
-              Full Name
-            </label>
+        <RevealWrapper>
+          <h3 className="pb-6 text-3xl font-semibold sm:pb-10" ref={revealRef}>
+            Let’s Get in Touch
+          </h3>
+          <p className="text-xl leading-relaxed sm:text-2xl" ref={revealRef}>
+            We’re excited to hear from you. Let’s start something great together — contact us today!
+          </p>
+
+          <form onSubmit={handleSubmit} className="mt-10 grid max-w-2xl grid-cols-1 gap-6" ref={revealRef}>
             <input
               type="text"
-              id="name"
-              name="name"
-              value={formData.name}
+              name="firstName"
+              placeholder="First Name *"
+              value={formData.firstName}
               onChange={handleChange}
-              placeholder="Enter your full name"
-              className="mt-3 w-full border bg-backgroundBody py-4 pl-5 text-xl leading-[1.4] tracking-[0.4px] text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
               required
+              className="rounded-md border p-4 text-black"
             />
-          </div>
-
-          <div>
-            <label
-              htmlFor="company"
-              className="text-2xl leading-[1.2] tracking-[-0.48px] text-[#000000b3] dark:text-dark-100">
-              Company Name
-            </label>
             <input
               type="text"
-              id="company"
-              name="company"
-              value={formData.company}
+              name="lastName"
+              placeholder="Last Name *"
+              value={formData.lastName}
               onChange={handleChange}
-              placeholder="Your company name"
-              className="mt-3 w-full border bg-backgroundBody py-4 pl-5 text-xl leading-[1.4] tracking-[0.4px] text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
+              required
+              className="rounded-md border p-4 text-black"
             />
-          </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="text-2xl leading-[1.2] tracking-[-0.48px] text-[#000000b3] dark:text-dark-100">
-              Work Email
-            </label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone *"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="rounded-md border p-4 text-black"
+            />
             <input
               type="email"
-              id="email"
               name="email"
+              placeholder="Email *"
               value={formData.email}
               onChange={handleChange}
-              placeholder="name@company.com"
-              className="mt-3 w-full border bg-backgroundBody py-4 pl-5 text-xl leading-[1.4] tracking-[0.4px] text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
               required
+              className="rounded-md border p-4 text-black"
             />
-          </div>
-
-          <div className="relative">
-            <label
-              htmlFor="service"
-              className="text-2xl leading-[1.2] tracking-[-0.48px] text-[#000000b3] dark:text-dark-100">
-              Service Type*
-            </label>
-            <select
-              id="service"
-              name="service"
-              value={formData.service}
+            <input
+              type="text"
+              name="requirement"
+              placeholder="Your Requirement *"
+              value={formData.requirement}
               onChange={handleChange}
-              className="mt-3 w-full appearance-none text-ellipsis border bg-backgroundBody px-5 py-4 indent-px text-xl leading-[1.4] tracking-[0.4px] text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
-              required>
-              <option value="UI/UX">UX Design</option>
-              <option value="Web design">Product Design</option>
-              <option value="Web development">Brand Identity</option>
-              <option value="Web development">Design System</option>
-            </select>
-            <span className="absolute right-5 top-1/2 translate-y-1/3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="inline dark:hidden">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="black"
-                  strokeOpacity="0.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                className="hidden dark:inline"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="white"
-                  strokeOpacity="0.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </div>
-
-          <div className="relative">
-            <label
-              htmlFor="budget"
-              className="text-2xl leading-[1.2] tracking-[-0.48px] text-[#000000b3] dark:text-dark-100">
-              Project Budget*
-            </label>
-            <select
-              id="budget"
-              name="budget"
-              value={formData.budget}
-              onChange={handleChange}
-              className="mt-3 w-full appearance-none text-ellipsis border bg-backgroundBody px-5 py-4 indent-px text-xl leading-[1.4] tracking-[0.4px] text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
-              required>
-              <option value="40k">$10k - $25k</option>
-              <option value="55k">$25k - $50k</option>
-              <option value="90k">$50k - $100k</option>
-              <option value="100k+">$100k+</option>
-            </select>
-            <span className="absolute right-5 top-1/2 inline translate-y-1/3 dark:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="black"
-                  strokeOpacity="0.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-            <span className="absolute right-5 top-1/2 hidden translate-y-1/3 dark:inline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="white"
-                  strokeOpacity="0.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </div>
-
-          <div className="md:col-span-full">
-            <label
-              htmlFor="message"
-              className="text-2xl leading-[1.2] tracking-[-0.48px] text-[#000000b3] dark:text-dark-100">
-              Project Brief*
-            </label>
+              required
+              className="rounded-md border p-4 text-black"
+            />
             <textarea
-              id="message"
-              name="message"
-              value={formData.message}
+              name="comment"
+              placeholder="Comment (optional)"
+              rows={4}
+              value={formData.comment}
               onChange={handleChange}
-              placeholder="Tell us about your project goals and timeline"
-              className="mt-3 w-full border bg-backgroundBody py-4 pl-5 text-xl leading-[1.4] tracking-[0.4px] text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
-              required></textarea>
-          </div>
-
-          <div className="col-span-full sm:mt-14 md:mx-auto">
-            <button type="submit" className="rv-button rv-button-primary block w-full md:inline-block md:w-auto">
-              <div className="rv-button-top">
-                <span>Send Message</span>
-              </div>
-              <div className="rv-button-bottom">
-                <span className="text-nowrap">Send Message</span>
-              </div>
+              className="rounded-md border p-4 text-black"></textarea>
+            <label className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                name="termsAccepted"
+                checked={formData.termsAccepted}
+                onChange={handleChange}
+                required
+              />
+              <span>I accept the Terms and Conditions.</span>
+            </label>
+            <button type="submit" className="rounded-md bg-primary px-6 py-3 font-semibold text-white">
+              Submit
             </button>
-          </div>
+          </form>
+
+          <h3 className="pb-4 pt-16 text-2xl font-semibold" ref={revealRef}>
+            Book Your Appointment
+          </h3>
+          <ul className="list-inside list-disc space-y-2 text-lg" ref={revealRef}>
+            <li>
+              <strong>Service:</strong> 1 on 1 Strategy Funding Call (20 mins)
+            </li>
+            <br />
+            <li>
+              <strong>Date:</strong> 11 Jun 2025
+            </li>
+            <br />
+            <li>
+              <strong>Time Zone:</strong> Asia/Dhaka (+06:00)
+            </li>
+            <br />
+            <li>
+              <strong>Time:</strong> 08:30 PM
+            </li>
+            <br />
+          </ul>
         </RevealWrapper>
       </div>
     </section>
   )
 }
 
-export default ContactForm
+export default ContactPage
